@@ -7,6 +7,7 @@ public class Damage implements Mechanic
 	public void apply()
 	{
 		// TODO Auto-generated method stub
+		System.out.println("You just took damage!");
 		
 	}
 

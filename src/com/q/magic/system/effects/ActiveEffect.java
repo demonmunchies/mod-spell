@@ -1,8 +1,23 @@
 package com.q.magic.system.effects;
 
+import com.q.entities.Entity;
+
 // ActiveEffect is implemented as a Command Design Pattern interface
-public interface ActiveEffect
+public abstract class ActiveEffect
 {
-	public void apply();
-	public void remove();
+	private int duration;
+	private Entity target;
+	
+	public abstract void apply();
+	public abstract void remove();
+	
+	public int getDuration()
+	{
+		return this.duration;
+	}
+	
+	public void setDuration(int duration)
+	{
+		this.duration = duration;
+	}
 }

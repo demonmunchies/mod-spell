@@ -1,6 +1,4 @@
-package com.q.magic.system.mechanic;
-
-
+package com.q.magic.system.enums;
 
 public enum Mechanics
 {

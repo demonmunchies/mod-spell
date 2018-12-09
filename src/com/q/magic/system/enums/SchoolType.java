@@ -1,0 +1,6 @@
+package com.q.magic.system.enums;
+
+public enum SchoolType
+{
+	EVOCATION, CONJURATION, DIVINATION, ENCHANTMENT, ILLUSION, NECROMANCY, ABJURATION, TRANSMUTATION;
+}

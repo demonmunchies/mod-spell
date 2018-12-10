@@ -17,19 +17,21 @@ public class DoT extends ActiveEffect
 		super.setDuration(3);
 	}
 
+	// Damage over Time effects only apply on specified time intervals, so apply only deals damage when duration % time interval == 0
 	@Override
 	public void apply()
 	{
-		// TODO Auto-generated method stub
-		System.out.println("You got a DoT on you!");
-
+		if(this.getDuration() % this.timeInterval == 0)
+		{
+			System.out.println("Damage dealt!");
+			// TODO Deal damage in DoT Class
+		}
 	}
 
 	@Override
 	public void remove()
 	{
-		// TODO Auto-generated method stub
-
+		// Nothing special is done when a DoTis removed
 	}
 
 }

@@ -6,22 +6,21 @@ public class ActiveEffectThread extends Thread
 	{
 		System.out.println("Thread made!");
 	}
-	
+
 	synchronized public void run()
 	{
-		while(true)
+		while (true)
 		{
 			ActiveEffectEngine.getInstance().updateActiveEffects();
 			try
 			{
 				wait(1000);
-			}
-			catch(InterruptedException e)
+			} catch (InterruptedException e)
 			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 	}
-	
+
 }

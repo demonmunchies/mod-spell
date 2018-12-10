@@ -66,14 +66,14 @@ public class ActiveEffectEngine
 			// durations left
 			e.setAeArr(tempEffect);
 			// If there are more active effects affecting the entity, the entity is added
-			// back into the array list of entites with active effects.
+			// back into the array list of entities with active effects.
 			if (!e.getAeArr().isEmpty())
 			{
 				// The entity is added
 				tempEntity.add(e);
 			}
 		}
-		// The array list is upated to hold all entities that still have active effects
+		// The array list is updated to hold all entities that still have active effects
 		this.entityArr = tempEntity;
 	}
 }

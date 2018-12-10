@@ -39,7 +39,7 @@ public class DoT extends ActiveEffect
 	@Override
 	public void remove()
 	{
-		// Nothing special is done when a DoTis removed
+		// Nothing special is done when a DoT is removed
 	}
 
 	@Override

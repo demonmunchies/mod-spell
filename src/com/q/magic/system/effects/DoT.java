@@ -31,7 +31,7 @@ public class DoT extends ActiveEffect
 	{
 		if (this.getDuration() % this.timeInterval == 0)
 		{
-			System.out.println("Damage dealt!");
+			//System.out.println("Damage dealt!");
 			// TODO Deal damage in DoT Class
 		}
 	}

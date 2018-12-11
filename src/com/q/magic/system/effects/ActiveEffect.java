@@ -8,12 +8,11 @@ public abstract class ActiveEffect
 {
 	private int		duration;
 	private Entity	target;
+	private Entity	caster;
 
 	public abstract void apply();
 
 	public abstract void remove();
-	
-	public abstract void calculate();
 
 	public int getDuration()
 	{
@@ -24,7 +23,7 @@ public abstract class ActiveEffect
 	{
 		this.duration = duration;
 	}
-	
+
 	public Entity getTarget()
 	{
 		return this.target;
@@ -33,6 +32,16 @@ public abstract class ActiveEffect
 	public void setTarget(Entity target)
 	{
 		this.target = target;
+	}
+	
+	public Entity getCaster()
+	{
+		return this.caster;
+	}
+
+	public void setCaster(Entity caster)
+	{
+		this.caster = caster;
 	}
 
 	public void addToActiveEffectEngine(ActiveEffect ae)

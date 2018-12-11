@@ -11,13 +11,21 @@ public abstract class Entity
 	private int						mana;
 	private int						stamina;
 
-	private int						fireResistance;
-	private int						coldResistance;
-	private int						electricResistance;
-	private int						acidResistance;
-	private int						forceResistance;
-	private int						positiveResistance;
-	private int						negativeResistance;
+	private int						fireResistanceFixed;
+	private int						coldResistanceFixed;
+	private int						electricResistanceFixed;
+	private int						acidResistanceFixed;
+	private int						forceResistanceFixed;
+	private int						positiveResistanceFixed;
+	private int						negativeResistanceFixed;
+
+	private double					fireResistancePercent;
+	private double					coldResistancePercent;
+	private double					electricResistancePercent;
+	private double					acidResistancePercent;
+	private double					forceResistancePercent;
+	private double					positiveResistancePercent;
+	private double					negativeResistancePercent;
 
 	// Entity Active Effects
 	private ArrayList<ActiveEffect>	aeArr;
@@ -56,74 +64,144 @@ public abstract class Entity
 		this.stamina = stamina;
 	}
 
-	public int getFireResistance()
+	public int getFireResistanceFixed()
 	{
-		return fireResistance;
+		return fireResistanceFixed;
 	}
 
-	public void setFireResistance(int fireResistance)
+	public void setFireResistanceFixed(int fireResistanceFixed)
 	{
-		this.fireResistance = fireResistance;
+		this.fireResistanceFixed = fireResistanceFixed;
 	}
 
-	public int getColdResistance()
+	public int getColdResistanceFixed()
 	{
-		return coldResistance;
+		return coldResistanceFixed;
 	}
 
-	public void setColdResistance(int coldResistance)
+	public void setColdResistanceFixed(int coldResistanceFixed)
 	{
-		this.coldResistance = coldResistance;
+		this.coldResistanceFixed = coldResistanceFixed;
 	}
 
-	public int getElectricResistance()
+	public int getElectricResistanceFixed()
 	{
-		return electricResistance;
+		return electricResistanceFixed;
 	}
 
-	public void setElectricResistance(int electricResistance)
+	public void setElectricResistanceFixed(int electricResistanceFixed)
 	{
-		this.electricResistance = electricResistance;
+		this.electricResistanceFixed = electricResistanceFixed;
 	}
 
-	public int getAcidResistance()
+	public int getAcidResistanceFixed()
 	{
-		return acidResistance;
+		return acidResistanceFixed;
 	}
 
-	public void setAcidResistance(int acidResistance)
+	public void setAcidResistanceFixed(int acidResistanceFixed)
 	{
-		this.acidResistance = acidResistance;
+		this.acidResistanceFixed = acidResistanceFixed;
 	}
 
-	public int getForceResistance()
+	public int getForceResistanceFixed()
 	{
-		return forceResistance;
+		return forceResistanceFixed;
 	}
 
-	public void setForceResistance(int forceResistance)
+	public void setForceResistanceFixed(int forceResistanceFixed)
 	{
-		this.forceResistance = forceResistance;
+		this.forceResistanceFixed = forceResistanceFixed;
 	}
 
-	public int getPositiveResistance()
+	public int getPositiveResistanceFixed()
 	{
-		return positiveResistance;
+		return positiveResistanceFixed;
 	}
 
-	public void setPositiveResistance(int positiveResistance)
+	public void setPositiveResistanceFixed(int positiveResistanceFixed)
 	{
-		this.positiveResistance = positiveResistance;
+		this.positiveResistanceFixed = positiveResistanceFixed;
 	}
 
-	public int getNegativeResistance()
+	public int getNegativeResistanceFixed()
 	{
-		return negativeResistance;
+		return negativeResistanceFixed;
 	}
 
-	public void setNegativeResistance(int negativeResistance)
+	public void setNegativeResistanceFixed(int negativeResistanceFixed)
 	{
-		this.negativeResistance = negativeResistance;
+		this.negativeResistanceFixed = negativeResistanceFixed;
+	}
+
+	public double getFireResistancePercent()
+	{
+		return fireResistancePercent;
+	}
+
+	public void setFireResistancePercent(double fireResistancePercent)
+	{
+		this.fireResistancePercent = fireResistancePercent;
+	}
+
+	public double getColdResistancePercent()
+	{
+		return coldResistancePercent;
+	}
+
+	public void setColdResistancePercent(double coldResistancePercent)
+	{
+		this.coldResistancePercent = coldResistancePercent;
+	}
+
+	public double getElectricResistancePercent()
+	{
+		return electricResistancePercent;
+	}
+
+	public void setElectricResistancePercent(double electricResistancePercent)
+	{
+		this.electricResistancePercent = electricResistancePercent;
+	}
+
+	public double getAcidResistancePercent()
+	{
+		return acidResistancePercent;
+	}
+
+	public void setAcidResistancePercent(double acidResistancePercent)
+	{
+		this.acidResistancePercent = acidResistancePercent;
+	}
+
+	public double getForceResistancePercent()
+	{
+		return forceResistancePercent;
+	}
+
+	public void setForceResistancePercent(double forceResistancePercent)
+	{
+		this.forceResistancePercent = forceResistancePercent;
+	}
+
+	public double getPositiveResistancePercent()
+	{
+		return positiveResistancePercent;
+	}
+
+	public void setPositiveResistancePercent(double positiveResistancePercent)
+	{
+		this.positiveResistancePercent = positiveResistancePercent;
+	}
+
+	public double getNegativeResistancePercent()
+	{
+		return negativeResistancePercent;
+	}
+
+	public void setNegativeResistancePercent(double negativeResistancePercent)
+	{
+		this.negativeResistancePercent = negativeResistancePercent;
 	}
 
 	public ArrayList<ActiveEffect> getAeArr()

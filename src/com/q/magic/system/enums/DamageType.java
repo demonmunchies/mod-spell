@@ -9,7 +9,12 @@ public enum DamageType
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getFireResistancePercent())) - target.getFireResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	},
 	COLD
@@ -17,7 +22,12 @@ public enum DamageType
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getColdResistancePercent())) - target.getColdResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	},
 	ACID
@@ -25,15 +35,25 @@ public enum DamageType
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getAcidResistancePercent())) - target.getColdResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	},
-	ELECTRICITY
+	ELECTRIC
 	{
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getElectricResistancePercent())) - target.getElectricResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	},
 	FORCE
@@ -41,7 +61,12 @@ public enum DamageType
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getForceResistancePercent())) - target.getForceResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	},
 	POSITIVE
@@ -49,7 +74,12 @@ public enum DamageType
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getPositiveResistancePercent())) - target.getPositiveResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	},
 	NEGATIVE
@@ -57,7 +87,12 @@ public enum DamageType
 		@Override
 		public int calculateDamageDealt(Entity caster, Entity target, int damage)
 		{
-			return 0;
+			int totalDamage = (int)(damage * (1 - target.getNegativeResistancePercent())) - target.getNegativeResistanceFixed();
+			if(totalDamage < 0)
+			{
+				totalDamage = 0;
+			}
+			return totalDamage;
 		}
 	};
 

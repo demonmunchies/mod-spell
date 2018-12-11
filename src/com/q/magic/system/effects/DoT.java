@@ -31,8 +31,8 @@ public class DoT extends ActiveEffect
 	{
 		if (this.getDuration() % this.timeInterval == 0)
 		{
-			//System.out.println("Damage dealt!");
-			// TODO Deal damage in DoT Class
+			int damageDealt = this.dmgType.calculateDamageDealt(this.getCaster(), this.getTarget(), this.damage);
+			this.getTarget().setHealth(this.getTarget().getHealth() - damageDealt);
 		}
 	}
 
@@ -41,12 +41,4 @@ public class DoT extends ActiveEffect
 	{
 		// Nothing special is done when a DoT is removed
 	}
-
-	@Override
-	public void calculate()
-	{
-		// TODO Write code for resistance against
-
-	}
-
 }

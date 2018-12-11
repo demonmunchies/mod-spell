@@ -23,6 +23,11 @@ public class ActiveEffectEngine
 	{
 		return INSTANCE;
 	}
+	
+	public static synchronized void initialize()
+	{
+		ActiveEffectEngine.getInstance();
+	}
 
 	// This method updates every active effect in the game space.
 	public synchronized void updateActiveEffects()

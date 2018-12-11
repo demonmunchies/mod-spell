@@ -11,13 +11,13 @@ public abstract class Entity
 	private int						mana;
 	private int						stamina;
 
-	private double					fireResistance;
-	private double					coldResistance;
-	private double					electricResistance;
-	private double					acidResistance;
-	private double					forceResistance;
-	private double					positiveResistance;
-	private double					negativeResistance;
+	private int						fireResistance;
+	private int						coldResistance;
+	private int						electricResistance;
+	private int						acidResistance;
+	private int						forceResistance;
+	private int						positiveResistance;
+	private int						negativeResistance;
 
 	// Entity Active Effects
 	private ArrayList<ActiveEffect>	aeArr;
@@ -56,72 +56,72 @@ public abstract class Entity
 		this.stamina = stamina;
 	}
 
-	public double getFireResistance()
+	public int getFireResistance()
 	{
 		return fireResistance;
 	}
 
-	public void setFireResistance(double fireResistance)
+	public void setFireResistance(int fireResistance)
 	{
 		this.fireResistance = fireResistance;
 	}
 
-	public double getColdResistance()
+	public int getColdResistance()
 	{
 		return coldResistance;
 	}
 
-	public void setColdResistance(double coldResistance)
+	public void setColdResistance(int coldResistance)
 	{
 		this.coldResistance = coldResistance;
 	}
 
-	public double getElectricResistance()
+	public int getElectricResistance()
 	{
 		return electricResistance;
 	}
 
-	public void setElectricResistance(double electricResistance)
+	public void setElectricResistance(int electricResistance)
 	{
 		this.electricResistance = electricResistance;
 	}
 
-	public double getAcidResistance()
+	public int getAcidResistance()
 	{
 		return acidResistance;
 	}
 
-	public void setAcidResistance(double acidResistance)
+	public void setAcidResistance(int acidResistance)
 	{
 		this.acidResistance = acidResistance;
 	}
 
-	public double getForceResistance()
+	public int getForceResistance()
 	{
 		return forceResistance;
 	}
 
-	public void setForceResistance(double forceResistance)
+	public void setForceResistance(int forceResistance)
 	{
 		this.forceResistance = forceResistance;
 	}
 
-	public double getPositiveResistance()
+	public int getPositiveResistance()
 	{
 		return positiveResistance;
 	}
 
-	public void setPositiveResistance(double positiveResistance)
+	public void setPositiveResistance(int positiveResistance)
 	{
 		this.positiveResistance = positiveResistance;
 	}
 
-	public double getNegativeResistance()
+	public int getNegativeResistance()
 	{
 		return negativeResistance;
 	}
 
-	public void setNegativeResistance(double negativeResistance)
+	public void setNegativeResistance(int negativeResistance)
 	{
 		this.negativeResistance = negativeResistance;
 	}

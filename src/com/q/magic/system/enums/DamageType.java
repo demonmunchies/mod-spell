@@ -59,16 +59,8 @@ public enum DamageType
 		{
 			return 0;
 		}
-	},
-	POISON
-	{
-		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
-		{
-			return 0;
-		}
 	};
-	
+
 	public int calculateDamageDealt(Entity caster, Entity target, int damage)
 	{
 		return 0;

@@ -33,7 +33,7 @@ public abstract class ActiveEffect
 	{
 		this.target = target;
 	}
-	
+
 	public Entity getCaster()
 	{
 		return this.caster;

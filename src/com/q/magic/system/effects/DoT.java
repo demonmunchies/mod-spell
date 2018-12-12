@@ -3,6 +3,7 @@ package com.q.magic.system.effects;
 import com.q.entities.Entity;
 import com.q.magic.system.enums.DamageType;
 import com.q.magic.system.enums.DescriptorType;
+import com.q.magic.system.mechanic.Damage;
 
 public class DoT extends ActiveEffect
 {
@@ -31,8 +32,8 @@ public class DoT extends ActiveEffect
 	{
 		if (this.getDuration() % this.timeInterval == 0)
 		{
-			int damageDealt = this.dmgType.calculateDamageDealt(this.getCaster(), this.getTarget(), this.damage);
-			this.getTarget().setHealth(this.getTarget().getHealth() - damageDealt);
+			Damage damage = new Damage(this.getTarget(), this.getCaster(), this.dmgType, this.damage);
+			System.out.println(this.getTarget().getHealth());
 		}
 	}
 

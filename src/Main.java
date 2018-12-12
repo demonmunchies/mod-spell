@@ -12,7 +12,6 @@ public class Main
 	{
 		ActiveEffectEngine.initialize();
 		PlayerCharacter pc = new PlayerCharacter();
-		pc.setHealth(100);
 		DoT dot = new DoT(10, pc, 5, 2, DamageType.FIRE, null);
 	}
 }

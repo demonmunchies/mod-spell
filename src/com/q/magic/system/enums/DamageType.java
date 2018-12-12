@@ -7,97 +7,62 @@ public enum DamageType
 	FIRE
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getFireResistancePercent())) - target.getFireResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getFireResistanceFixed(), target.getFireResistancePercent() };
 		}
 	},
 	COLD
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getColdResistancePercent())) - target.getColdResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getColdResistanceFixed(), target.getColdResistancePercent() };
 		}
 	},
 	ACID
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getAcidResistancePercent())) - target.getColdResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getAcidResistanceFixed(), target.getAcidResistancePercent() };
 		}
 	},
 	ELECTRIC
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getElectricResistancePercent())) - target.getElectricResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getElectricResistanceFixed(), target.getElectricResistancePercent() };
 		}
 	},
 	FORCE
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getForceResistancePercent())) - target.getForceResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getForceResistanceFixed(), target.getForceResistancePercent() };
 		}
 	},
 	POSITIVE
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getPositiveResistancePercent())) - target.getPositiveResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getPositiveResistanceFixed(), target.getPositiveResistancePercent() };
 		}
 	},
 	NEGATIVE
 	{
 		@Override
-		public int calculateDamageDealt(Entity caster, Entity target, int damage)
+		public double[] damageModifiers(Entity caster, Entity target)
 		{
-			int totalDamage = (int)(damage * (1 - target.getNegativeResistancePercent())) - target.getNegativeResistanceFixed();
-			if(totalDamage < 0)
-			{
-				totalDamage = 0;
-			}
-			return totalDamage;
+			return new double[] { target.getNegativeResistanceFixed(), target.getNegativeResistancePercent() };
 		}
 	};
 
-	public int calculateDamageDealt(Entity caster, Entity target, int damage)
+	public double[] damageModifiers(Entity caster, Entity target)
 	{
-		return 0;
+		return null;
 	}
 }

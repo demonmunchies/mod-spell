@@ -23,7 +23,7 @@ public class ActiveEffectEngine
 	{
 		return INSTANCE;
 	}
-	
+
 	public static synchronized void initialize()
 	{
 		ActiveEffectEngine.getInstance();
@@ -51,7 +51,7 @@ public class ActiveEffectEngine
 				{
 					// Effect applied
 					ae.apply();
-					//System.out.println("Effect Applied!");
+					// System.out.println("Effect Applied!");
 					// Adds the active effect back into the temp array to then be calculated next
 					// cycle
 					tempEffect.add(ae);
@@ -61,7 +61,7 @@ public class ActiveEffectEngine
 				{
 					// The active effect has its remove() method called
 					ae.remove();
-					//System.out.println("Effect Removed!");
+					// System.out.println("Effect Removed!");
 
 				}
 				// Decrements the duration

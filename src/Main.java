@@ -1,6 +1,4 @@
 
-import java.util.ArrayList;
-
 import com.q.entities.player.PlayerCharacter;
 import com.q.magic.system.effects.DoT;
 import com.q.magic.system.engines.ActiveEffectEngine;
